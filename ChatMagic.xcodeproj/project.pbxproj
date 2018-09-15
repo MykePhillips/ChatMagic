@@ -12,9 +12,12 @@
 		BEE8DF06214CDA8D000AC002 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEE8DF04214CDA8D000AC002 /* Main.storyboard */; };
 		BEE8DF08214CDA99000AC002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEE8DF07214CDA99000AC002 /* Assets.xcassets */; };
 		BEE8DF0B214CDA99000AC002 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEE8DF09214CDA99000AC002 /* LaunchScreen.storyboard */; };
+		E5F8D5815E6E9C39541BF395 /* Pods_ChatMagic.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F9FE4DFE14ACCB9EFC921E0 /* Pods_ChatMagic.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F9FE4DFE14ACCB9EFC921E0 /* Pods_ChatMagic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatMagic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5811621087D9A852F23E5CC5 /* Pods-ChatMagic.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatMagic.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatMagic/Pods-ChatMagic.debug.xcconfig"; sourceTree = "<group>"; };
 		BEE8DEFD214CDA8D000AC002 /* ChatMagic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatMagic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEE8DF00214CDA8D000AC002 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEE8DF02214CDA8D000AC002 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		BEE8DF07214CDA99000AC002 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEE8DF0A214CDA99000AC002 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEE8DF0C214CDA99000AC002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F15482068D19A19771CE9C06 /* Pods-ChatMagic.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatMagic.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChatMagic/Pods-ChatMagic.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E5F8D5815E6E9C39541BF395 /* Pods_ChatMagic.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03E8012B1D47ED708966296B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5811621087D9A852F23E5CC5 /* Pods-ChatMagic.debug.xcconfig */,
+				F15482068D19A19771CE9C06 /* Pods-ChatMagic.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B608726455481C2C324910F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0F9FE4DFE14ACCB9EFC921E0 /* Pods_ChatMagic.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BEE8DEF4214CDA8D000AC002 = {
 			isa = PBXGroup;
 			children = (
 				BEE8DEFF214CDA8D000AC002 /* ChatMagic */,
 				BEE8DEFE214CDA8D000AC002 /* Products */,
+				03E8012B1D47ED708966296B /* Pods */,
+				B608726455481C2C324910F6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BEE8DF0F214CDA99000AC002 /* Build configuration list for PBXNativeTarget "ChatMagic" */;
 			buildPhases = (
+				C425518AD118513AB1FB0C1F /* [CP] Check Pods Manifest.lock */,
 				BEE8DEF9214CDA8D000AC002 /* Sources */,
 				BEE8DEFA214CDA8D000AC002 /* Frameworks */,
 				BEE8DEFB214CDA8D000AC002 /* Resources */,
+				8706432B5D5583187DC20BB4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,51 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8706432B5D5583187DC20BB4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChatMagic/Pods-ChatMagic-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/StarscreamSocketIO/StarscreamSocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StarscreamSocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChatMagic/Pods-ChatMagic-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C425518AD118513AB1FB0C1F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChatMagic-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BEE8DEF9214CDA8D000AC002 /* Sources */ = {
@@ -278,6 +349,7 @@
 		};
 		BEE8DF10214CDA99000AC002 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5811621087D9A852F23E5CC5 /* Pods-ChatMagic.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +368,7 @@
 		};
 		BEE8DF11214CDA99000AC002 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F15482068D19A19771CE9C06 /* Pods-ChatMagic.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
